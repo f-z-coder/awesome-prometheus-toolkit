@@ -19,7 +19,7 @@ export function RulesDialog() {
   if (!rulesInfo) return null
   return (
     <Dialog open={isOpen} onOpenChange={(state) => setIsOpen(state)}>
-      <DialogContent className="max-h-[80vh] max-w-4xl p-0">
+      <DialogContent className="max-h-[80vh] max-w-4xl p-0 !duration-300 !ease-in-out data-[state=open]:slide-in-from-bottom-[48%]  data-[state=closed]:slide-out-to-bottom-[48%]">
         <DialogHeader className="border-b px-6 py-4">
           <div className="flex items-center gap-2 flex-wrap ">
             {rulesInfo.icon ? (
