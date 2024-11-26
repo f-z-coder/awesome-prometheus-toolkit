@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetBrainMono.variable} antialiased`}
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="h-dvh flex flex-col">
           <Header />
           {children}
           <Footer />

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const Footer = () => {
   return (
-    <footer className="border-t px-4 py-[18px]">
+    <footer className="border-t px-4 py-[18px] bg-background sticky bottom-0 z-50 ">
       <div className="container mx-auto max-w-screen-lg flex items-center justify-between gap-4 ">
         <a
           href="https://github.com/your-repo"

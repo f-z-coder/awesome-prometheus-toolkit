@@ -19,7 +19,7 @@ export function RulesDialog() {
   if (!rulesInfo) return null
   return (
     <Dialog open={isOpen} onOpenChange={(state) => setIsOpen(state)}>
-      <DialogContent className="max-h-[80vh] max-w-3xl p-0 gap-0 !duration-300 !ease-in-out">
+      <DialogContent className="max-h-[80dvh] max-w-3xl p-0 gap-0 !duration-300 !ease-in-out">
         <DialogHeader className="border-b px-6 py-4">
           <div className="flex items-center gap-2 flex-wrap ">
             {rulesInfo.icon ? (
@@ -41,7 +41,7 @@ export function RulesDialog() {
             </DialogDescription>
           </div>
         </DialogHeader>
-        <ScrollArea className="max-h-[calc(80vh-8rem)] pr-4 [&>div>div]:!block">
+        <ScrollArea className="max-h-[calc(80dvh-8rem)] pr-4 [&>div>div]:!block">
           <div className="flex flex-col gap-6 p-6">
             {rulesInfo.rules.map((rule, index) => (
               <RuleItem key={rule.name + index} index={index + 1} rule={rule} />
