@@ -16,14 +16,9 @@ export function CodeBlock({
   className,
 }: CodeBlockProps) {
   return (
-    <div
-      className={cn(
-        "relative rounded-md bg-muted/50 font-mono flex",
-        className
-      )}
-    >
-      <ScrollArea className="[&>div>div]:!block">
-        <pre className="text-sm p-6 pt-10">
+    <div className={cn("relative rounded bg-[#F8FAFC] flex", className)}>
+      <ScrollArea className="p-6 [&>div>div]:!block">
+        <pre className="text-xs font-normal text-mono">
           <code lang={language}>
             {content.split("\n").map((line, i) => {
               const formattedLine = line.replace(
@@ -44,10 +39,11 @@ export function CodeBlock({
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       <Button
-        className="absolute right-0 top-0 bg-muted text-muted-[#64748B] rounded font-sans p-3 hover:bg-muted/10"
+        className="absolute right-0 top-0 bg-muted text-muted-foreground border-b rounded-none rounded-tr rounded-bl p-2 gap-1 hover:bg-muted/10"
         onClick={() => navigator.clipboard.writeText(content)}
       >
-        <Copy className="h-4 w-4" /> <span>Copy</span>
+        <Copy className="h-4 w-4" />
+        <span className="text-2xs font-bold">COPY</span>
       </Button>
     </div>
   )

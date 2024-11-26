@@ -51,6 +51,9 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
+      fontSize: {
+        "2xs": ["10px", "16px"],
+      },
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-jetbrains-mono)"],

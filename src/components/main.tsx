@@ -22,9 +22,9 @@ export const Main: FC<MainProps> = ({ rulesData }) => {
     .filter((group) => group.services.length > 0)
 
   return (
-    <main className="flex-grow px-4 py-12">
-      <div className="container mx-auto max-w-screen-lg">
-        <h1 className="text-xl font-medium mb-6">Browse Library</h1>
+    <main className="flex-grow px-4">
+      <div className="container mx-auto max-w-screen-lg py-12 flex flex-col gap-4">
+        <h1 className="text-xl font-medium">Browse Library</h1>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <GroupList groups={filteredGroups} />
         <RulesDialog />

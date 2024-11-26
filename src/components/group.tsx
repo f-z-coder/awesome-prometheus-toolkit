@@ -8,7 +8,7 @@ interface GroupProps {
 export function Group({ group }: GroupProps) {
   return (
     <div>
-      <h2 className="text-xs font-bold text-muted-foreground mb-4">
+      <h2 className="text-2xs font-bold text-muted-foreground">
         {group.name.toUpperCase()}
       </h2>
       <ServiceList services={group.services} />

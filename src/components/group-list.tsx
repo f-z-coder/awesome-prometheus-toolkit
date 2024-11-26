@@ -7,7 +7,7 @@ interface GroupListProps {
 
 export function GroupList({ groups }: GroupListProps) {
   return (
-    <div className="space-y-12">
+    <div className="space-y-6">
       {groups.map((group) => (
         <Group key={group.name} group={group} />
       ))}

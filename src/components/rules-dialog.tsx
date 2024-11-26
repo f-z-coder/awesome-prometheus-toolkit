@@ -19,7 +19,7 @@ export function RulesDialog() {
   if (!rulesInfo) return null
   return (
     <Dialog open={isOpen} onOpenChange={(state) => setIsOpen(state)}>
-      <DialogContent className="max-h-[80vh] max-w-4xl p-0 !duration-300 !ease-in-out">
+      <DialogContent className="max-h-[80vh] max-w-3xl p-0 gap-0 !duration-300 !ease-in-out">
         <DialogHeader className="border-b px-6 py-4">
           <div className="flex items-center gap-2 flex-wrap ">
             {rulesInfo.icon ? (
@@ -33,8 +33,10 @@ export function RulesDialog() {
                 className="w-6 h-6 shrink-0"
               />
             )}
-            <DialogTitle className="text-nowrap">{rulesInfo.title}</DialogTitle>
-            <DialogDescription className="text-xs font-bold text-muted-foreground bg-muted rounded-full px-1">
+            <DialogTitle className="text-base text-nowrap">
+              {rulesInfo.title}
+            </DialogTitle>
+            <DialogDescription className="text-2xs font-bold text-muted-foreground bg-muted rounded-full px-1">
               {rulesInfo.ruleCount} RULES
             </DialogDescription>
           </div>
