@@ -24,7 +24,7 @@ export function CodeBlock({
     >
       <ScrollArea className="[&>div>div]:!block">
         <pre className="text-sm p-6 pt-10">
-          <code className={language}>
+          <code lang={language}>
             {content.split("\n").map((line, i) => {
               const formattedLine = line.replace(
                 /(alert|expr|for|labels|severity|annotations|summary|description):/g,

@@ -19,7 +19,11 @@ export function RuleItem({ index, rule }: RuleItemProps) {
             {rule.description}
           </p>
         </div>
-        <CodeBlock content={rule.content} />
+        <CodeBlock
+          content={
+            rule.content || rule.contentParseError || "No Rule Available"
+          }
+        />
       </div>
     </div>
   )

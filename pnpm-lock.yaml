@@ -26,6 +26,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      liquidjs:
+        specifier: ^10.19.0
+        version: 10.19.0
       lucide-react:
         specifier: ^0.460.0
         version: 0.460.0(react@19.0.0-rc-66855b96-20241106)
@@ -44,6 +47,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.15)
+      yaml:
+        specifier: ^2.6.1
+        version: 2.6.1
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -764,6 +770,10 @@ packages:
     resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
     engines: {node: '>=12.5.0'}
 
+  commander@10.0.1:
+    resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
+    engines: {node: '>=14'}
+
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -1351,6 +1361,11 @@ packages:
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  liquidjs@10.19.0:
+    resolution: {integrity: sha512-dNINmbNJ/bp3B8n25BtZQV/GbrmFf0o2InGdMdfQXa+LxfzTFXOkUnBsOLZUb82sLzxaiWv5Jc381Kn4zHjTsQ==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
@@ -2615,6 +2630,8 @@ snapshots:
       color-string: 1.9.1
     optional: true
 
+  commander@10.0.1: {}
+
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
@@ -3345,6 +3362,10 @@ snapshots:
   lilconfig@3.1.2: {}
 
   lines-and-columns@1.2.4: {}
+
+  liquidjs@10.19.0:
+    dependencies:
+      commander: 10.0.1
 
   locate-path@6.0.0:
     dependencies:

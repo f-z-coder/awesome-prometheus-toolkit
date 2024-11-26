@@ -13,10 +13,10 @@ export interface Service {
 }
 
 export interface Exporter {
-  name?: string
   slug: string
-  doc_url?: string
   rules: Rule[] | null
+  name?: string
+  doc_url?: string
 }
 
 export interface Rule {
@@ -24,8 +24,9 @@ export interface Rule {
   description: string
   query: string
   severity: string
+  content?: string
+  contentParseError?: string
   for?: string
-  content: string
   comments?: string
   summary?: string
 }
