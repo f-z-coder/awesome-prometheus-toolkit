@@ -41,8 +41,8 @@ export function RulesDialog() {
             </DialogDescription>
           </div>
         </DialogHeader>
-        <ScrollArea className="max-h-[calc(80dvh-8rem)] p-6 [&>div>div]:!block">
-          <div className="flex flex-col gap-6">
+        <ScrollArea className="max-h-[calc(80dvh-8rem)] px-6 [&>div>div]:!block">
+          <div className="flex flex-col gap-6 py-6">
             {rulesInfo.rules.map((rule, index) => (
               <RuleItem key={rule.name + index} index={index + 1} rule={rule} />
             ))}

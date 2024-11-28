@@ -17,8 +17,8 @@ export function CodeBlock({
 }: CodeBlockProps) {
   return (
     <div className={cn("relative rounded bg-[#F8FAFC] flex", className)}>
-      <ScrollArea className="p-6 [&>div>div]:!block">
-        <pre className="text-xs font-normal text-mono">
+      <ScrollArea className="py-6 [&>div>div]:!block">
+        <pre className="px-6 text-xs font-normal text-mono">
           <code lang={language}>
             {content.split("\n").map((line, i) => {
               const formattedLine = line.replace(
