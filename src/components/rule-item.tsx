@@ -12,7 +12,7 @@ export function RuleItem({ index, rule }: RuleItemProps) {
       <div className="flex flex-shrink-0 h-10 w-10 items-center justify-center rounded-full bg-muted text-foreground text-xs font-bold">
         {String(index).padStart(2, "0")}
       </div>
-      <div className="flex flex-col gap-4 w-[calc(100%-44px)]">
+      <div className="flex flex-col overflow-hidden flex-grow gap-4">
         <div className="space-y-1">
           <h3 className="text-sm font-medium">{rule.name}</h3>
           <p className="text-xs font-medium text-muted-foreground">

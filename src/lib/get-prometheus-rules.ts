@@ -4,7 +4,8 @@ import { RulesData } from "@/types/rules"
 
 // Template for Prometheus alert rule generation
 const TEMPLATE = `{% assign ruleName = name | split: ' ' %}{% capture ruleNameCamelcase %}{% for word in ruleName %}{{ word | capitalize }} {% endfor %}{% endcapture %}
-{% for comment in comments %}# {{ comment | strip }}
+{% assign comment_lines = comments | strip | split: '\n' %}
+{% for comment in comment_lines %}# {{ comment | strip }}
 {% endfor %}- alert: {{ ruleNameCamelcase | remove: ' ' | remove: '-' }}
   expr: '{{ query }}'
   for: {% if for %}{{ for }}{% else %}0m{% endif %}

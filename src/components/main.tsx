@@ -23,8 +23,8 @@ export const Main: FC<MainProps> = ({ rulesData }) => {
     .filter((group) => group.services.length > 0)
 
   return (
-    <main className="flex-grow overflow-hidden px-4">
-      <ScrollArea className="h-full pr-4 lg:pr-0">
+    <main className="flex-grow overflow-hidden">
+      <ScrollArea className="h-full px-4">
         <div className="container mx-auto max-w-screen-lg py-12 flex flex-col gap-4">
           <h1 className="text-xl font-medium">Browse Library</h1>
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
